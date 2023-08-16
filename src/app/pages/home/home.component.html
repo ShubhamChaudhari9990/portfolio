@@ -1,0 +1,32 @@
+<div>
+  <div class="contain">
+    <mat-toolbar class="toolbar">
+      <span class="flex">
+        <button class="name" mat-raised-button color="primary">{{name}}</button>
+      </span>
+      <button class="button" mat-button color="primary" routerLink="">Home</button>
+      <button class="button" mat-button color="primary" routerLink="">About</button>
+      <button class="button" mat-button color="primary" routerLink="">Projects</button>
+      <button class="button" mat-button color="primary" routerLink="">contact</button>
+    </mat-toolbar>
+    <!-- <ngb-carousel [interval]="3000" [showNavigationArrows]="arrow" *ngIf="images">
+      <ng-template ngbSlide *ngFor="let image of images">
+        <div class="picsum-img-wrapper">
+          <img [src]="image" alt="Random slide" class="carousel" />
+        </div>
+        <div class="carousel-caption">
+          <h3>No mouse navigation</h3>
+          <p>This carousel hides navigation arrows and indicators.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel> -->
+    <div class="image-container">
+      <img src="../../../assets/1.jpg" alt="image">
+      <div class="text-overlay">
+        <p>Hi I am Shubham Chuadhari</p>
+      </div>
+    </div>
+    <app-about></app-about>
+
+  </div>
+</div>

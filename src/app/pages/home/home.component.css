@@ -1,0 +1,60 @@
+.flex {
+    flex: 1 1 auto;
+}
+
+.name {
+    font-size: large;
+    pointer-events: none;
+}
+
+.button:hover {
+    color: white;
+    background-color: rgb(60, 80, 179);
+    padding: 10px;
+    font-size: large;
+    border-radius: 5px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 30%;
+    /* Adjust this value to control the vertical position */
+    left: 20px;
+    /* Adjust this value to control the horizontal position */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px;   
+    border-radius: 5px;
+}
+
+.space {
+    margin: 0px 10px;
+}
+
+.carousel {
+    width: 100%;
+    max-height: auto;
+    padding: 10px;
+}
+
+.toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+p{
+    font-size: 2vw;
+}
