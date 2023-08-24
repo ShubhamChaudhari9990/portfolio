@@ -26,6 +26,36 @@
     padding: 8px;   
     border-radius: 5px;
 }
+.text-overlay #cursor {
+    display: inline-block;
+    animation: blink-caret 0.75s step-end infinite;
+}
+.text-overlay #name {
+    display: inline-block;
+    border-right: 1px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: auto;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
 
 .space {
     margin: 0px 10px;
