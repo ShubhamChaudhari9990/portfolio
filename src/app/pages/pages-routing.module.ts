@@ -4,9 +4,11 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
+import { MainmenuComponent } from './mainmenu/mainmenu.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: MainmenuComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'about', component: AboutComponent },
   { path: '**', component: PagenotfoundComponent}

@@ -1,0 +1,36 @@
+.toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.flex {
+    flex: 1 1 auto;
+}
+
+.name {
+    font-size: large;
+    pointer-events: none;
+}
+
+.button:hover {
+    color: white;
+    background-color: rgb(60, 80, 179);
+    padding: 10px;
+    font-size: large;
+    border-radius: 5px;
+}
+.slider {
+    background-color: #7b8aff;
+}
+
+@media (max-width: 600px) {
+    .name {
+      display: none;
+    }
+    .spacer {
+      flex-grow: 1;
+    }
+  }

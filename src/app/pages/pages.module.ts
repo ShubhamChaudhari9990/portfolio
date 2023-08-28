@@ -11,12 +11,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
+import { MainmenuComponent } from './mainmenu/mainmenu.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectsComponent,
+    ContactComponent,
+    MainmenuComponent
   ],
   imports: [
     CommonModule,

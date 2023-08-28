@@ -21,6 +21,7 @@ export class HomeComponent {
   currentNameIndex: number = 0;
   currentName: string = '';
   cursorVisible: boolean = true;
+  activeComponent = ''; // Default active component
 
   ngOnInit() {
     this.typeName();
@@ -71,5 +72,13 @@ export class HomeComponent {
     const cursorVisibility = window.getComputedStyle(cursorElement).getPropertyValue('visibility');
     this.renderer.setStyle(cursorElement, 'visibility',
       cursorVisibility === 'hidden' ? 'visible' : 'hidden');
+  }
+
+  activateComponent(sectionId: string): void {
+    // this.activeComponent = component;
+    const section = this.el.nativeElement.querySelector(`#${sectionId}`);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
