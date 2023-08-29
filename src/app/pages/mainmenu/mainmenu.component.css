@@ -22,15 +22,17 @@
     font-size: large;
     border-radius: 5px;
 }
+
 .slider {
     background-color: #7b8aff;
 }
 
 @media (max-width: 600px) {
     .name {
-      display: none;
+        display: none;
     }
+
     .spacer {
-      flex-grow: 1;
+        flex-grow: 1;
     }
-  }
+}

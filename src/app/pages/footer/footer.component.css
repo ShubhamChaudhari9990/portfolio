@@ -1,34 +1,5 @@
-#name {
-    display: inline-block;
-    border-right: 1px solid black;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s steps(40);
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: auto;
-    }
-}
-
-#cursor {
-    display: inline-block;
-    animation: blink-caret 0.75s step-end infinite;
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
+.copyrights-container {
+    text-align: center;
+    margin-top: 50px;
+    background: rgb(222 223 246);
 }
