@@ -26,12 +26,16 @@
 .slider {
     background-color: #7b8aff;
 }
-
+.menu{
+    display: none;
+}
 @media (max-width: 600px) {
     .name {
         display: none;
     }
-
+    .menu{
+    display: flex;
+    }
     .spacer {
         flex-grow: 1;
     }
