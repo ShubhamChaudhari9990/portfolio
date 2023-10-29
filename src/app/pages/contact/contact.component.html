@@ -1,15 +1,15 @@
 <div class="contact-container">
     <h1>Contact Us</h1>
     <p>If you have any questions or inquiries, please feel free to contact us.</p>
-    <form class="contact-form">
+    <form class="contact-form" (ngSubmit)="submitContact(contact)">
       <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" [(ngModel)]="contact.name" required>
   
       <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" [(ngModel)]="contact.email" required>
   
       <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
+      <textarea id="message" name="message" rows="6" [(ngModel)]="contact.message" required></textarea>
   
       <button type="submit">Send Message</button>
     </form>
