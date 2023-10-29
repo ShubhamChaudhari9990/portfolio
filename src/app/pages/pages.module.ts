@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MainmenuComponent } from './mainmenu/mainmenu.component';
     MatIconModule,
     MatToolbarModule,
     NgbModule,
+    FormsModule
   ]
 })
 export class PagesModule { }

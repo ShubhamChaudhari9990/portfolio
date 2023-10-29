@@ -1,0 +1,16 @@
+.carousel {
+    width: 30%;
+    max-height: auto;
+    padding: 10px;
+    text-align: end;
+}
+
+img {
+    width: 10%;
+    height: 10%;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}

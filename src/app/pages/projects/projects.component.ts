@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
+  arrow = false;
+  image1 = '../../assets/java.jpg'
+  web = '../../assets/web.jpg'
+  img2 = '../../assets/hostel.png'
+  images = [this.img2, this.web, this.img2].map((n) => `${n}`);
 }
