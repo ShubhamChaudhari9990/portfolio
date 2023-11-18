@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from "@angular/fire/compat/firestore"
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,16 +9,33 @@ import { AngularFirestore } from "@angular/fire/compat/firestore"
 })
 export class ContactComponent {
 
-  contact = {
-    name : null,
-    email : null,
-    message : null
-  }
+  myForm: FormGroup;
 
-  constructor(public afs : AngularFirestore) {}
+  constructor(
+      public afs: AngularFirestore,
+      public fb: FormBuilder 
+    ) {
+      this.myForm = this.fb.group({
+        name: [null, Validators.required],
+        email: [null, Validators.required, Validators.email],
+        message: [null, Validators.required]
+      })
+    }
 
-  submitContact(contact:any) {
+  submitContact() {
     debugger
-    this.afs.collection("contact").add(contact);
+    if(this.myForm.valid) {
+      this.afs.collection("contact").add(this.myForm.value)
+      .then(() => {
+        alert("Thanks for submit");
+        this.myForm.reset();
+      })
+      .catch((err) => {
+        console.log("ERROR = ",err);
+      })
+    }
+    else {
+      window.alert("fill all records");
+    }
   }
 }
