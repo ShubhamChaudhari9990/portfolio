@@ -1,0 +1,33 @@
+.responsive-form-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input, textarea {
+    margin-bottom: 15px;
+    padding: 8px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .responsive-form-container {
+      width: 50%;
+    }
+  }
+  

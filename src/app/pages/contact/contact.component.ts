@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from "@angular/fire/compat/firestore"
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +14,8 @@ export class ContactComponent {
 
   constructor(
       public afs: AngularFirestore,
-      public fb: FormBuilder 
+      public fb: FormBuilder,
+      private toastr: ToastrService, 
     ) {
       this.myForm = this.fb.group({
         name: [null, Validators.required],
@@ -23,7 +25,6 @@ export class ContactComponent {
     }
 
   submitContact() {
-    debugger
     if(this.myForm.valid) {
       this.afs.collection("contact").add(this.myForm.value)
       .then(() => {
@@ -35,7 +36,7 @@ export class ContactComponent {
       })
     }
     else {
-      window.alert("fill all records");
+      this.toastr.warning('Warning!, All fields are mandatory');
     }
   }
 }

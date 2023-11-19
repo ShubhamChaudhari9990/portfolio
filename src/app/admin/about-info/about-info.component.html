@@ -1,0 +1,22 @@
+<div class="your-form-container">
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+      
+      <label for="introduction">Introduction</label>
+      <textarea id="introduction" name="introduction" rows="3" formControlName="introduction"></textarea>
+  
+      <label for="skill">Skill</label>
+      <input type="text" id="skill" name="skill" formControlName="skill">
+  
+      <label for="projectDescription">Project Description</label>
+      <textarea id="projectDescription" name="projectDescription" rows="3" formControlName="projectDescription"></textarea>
+  
+      <label for="projects">Projects</label>
+      <textarea id="projects" name="projects" rows="3" formControlName="projects"></textarea>
+  
+      <label for="contact">Contact</label>
+      <input type="text" id="contact" name="contact" formControlName="contact">
+  
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
