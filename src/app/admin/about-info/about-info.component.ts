@@ -28,10 +28,11 @@ export class AboutInfoComponent {
   }
 
   submitForm() {
+    debugger
     if(this.myForm.valid) {
       this.afs.collection("about").add(this.myForm.value)
       .then(() => {
-        this.toastr.success('About Information add Successfully');
+        this.toastr.success('About Information save Successfully');
         this.myForm.reset();
       })
       .catch((err) => {

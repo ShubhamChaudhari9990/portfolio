@@ -19,16 +19,15 @@ export class ContactComponent {
     ) {
       this.myForm = this.fb.group({
         name: [null, Validators.required],
-        email: [null, Validators.required, Validators.email],
+        email: [null, [Validators.required, Validators.email]],
         message: [null, Validators.required]
       })
     }
-
   submitContact() {
     if(this.myForm.valid) {
       this.afs.collection("contact").add(this.myForm.value)
       .then(() => {
-        alert("Thanks for submit");
+        this.toastr.success('Information Submit Successfully');
         this.myForm.reset();
       })
       .catch((err) => {
