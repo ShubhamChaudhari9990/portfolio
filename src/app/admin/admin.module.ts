@@ -4,17 +4,29 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AboutInfoComponent } from './about-info/about-info.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactsComponent } from './contacts/contacts.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
   declarations: [
-    AboutInfoComponent
+    AboutInfoComponent,
+    ContactsComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSortModule
   ]
 })
 export class AdminModule { }
