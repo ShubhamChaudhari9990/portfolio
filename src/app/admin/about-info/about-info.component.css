@@ -1,6 +1,7 @@
-.responsive-form-container {
-    width: 80%;
-    margin: auto;
+.form-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: bisque;
   }
   
   form {

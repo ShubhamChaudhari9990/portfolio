@@ -15,8 +15,11 @@ export class AboutComponent {
     public afs: AngularFirestore,
     private toastr: ToastrService,
   ){
-    this.afs.collection('about').valueChanges().subscribe((data)=>{
-      this.about=data;
+    this.afs.collection('about', ref => ref.where('profile', '==', 'developer')).valueChanges().subscribe((data)=>{
+      debugger
+      data.forEach((info) => {
+        this.about = info
+      })
     })
   }
 }

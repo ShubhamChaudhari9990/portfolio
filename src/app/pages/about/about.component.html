@@ -63,8 +63,9 @@
     <div class="container">
         <h2>Introduction</h2>
         <p>
-            I am an IT student passionate about technology and learning. This portfolio showcases some of my projects
-            and skills in the IT field.
+            {{about?.introduction}}
+            <!-- I am an IT student passionate about technology and learning. This portfolio showcases some of my projects
+            and skills in the IT field. -->
         </p>
 
         <h2>Skills</h2>
@@ -80,18 +81,20 @@
 
         <h2>Projects</h2>
         <p>
-            Here are a few of the projects I've worked on during my studies:
+            {{about?.projectDescription}}
+            <!-- Here are a few of the projects I've worked on during my studies: -->
         </p>
-        <ul>
-            <li><a href="#">Project 1: Web Application</a></li>
+        <ul *ngFor="let project of about?.projects">
+            <li><a [href]="'https://'+project.projectUrl" target="_blank">{{project.projectName}}</a></li>
+            <!-- <li><a href="#">Project 1: Web Application</a></li>
             <li><a href="#">Project 2: Database Management System</a></li>
-            <li><a href="#">Project 3: Mobile App Development</a></li>
+            <li><a href="#">Project 3: Mobile App Development</a></li> -->
         </ul>
 
         <h2>Contact</h2>
         <div class="contact">
             <p>If you'd like to get in touch with me, you can reach me at:</p>
-            <p>Email: <a>shubhamchaudhari9990@gmail.com</a></p>
+            <p>Email: <a href="shubhamchaudhari9990@gmail.com">shubhamchaudhari9990@gmail.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/shubham-chaudhari-0b89b3242/">linkedin</a></p>
         </div>
     </div>
