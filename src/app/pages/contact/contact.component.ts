@@ -24,18 +24,23 @@ export class ContactComponent {
       })
     }
   submitContact() {
-    if(this.myForm.valid) {
-      this.afs.collection("contact").add(this.myForm.value)
-      .then(() => {
-        this.toastr.success('Information Submit Successfully');
-        this.myForm.reset();
-      })
-      .catch((err) => {
-        console.log("ERROR = ",err);
-      })
+    if(navigator.onLine) {
+      if(this.myForm.valid) {
+        this.afs.collection("contact").add(this.myForm.value)
+        .then(() => {
+          this.toastr.success('Information Submit Successfully');
+          this.myForm.reset();
+        })
+        .catch((err) => {
+          console.log("ERROR = ",err);
+        })
+      }
+      else {
+        this.toastr.warning('Warning!, All fields are mandatory');
+      }
     }
     else {
-      this.toastr.warning('Warning!, All fields are mandatory');
+      this.toastr.warning('Please check your internet connection');
     }
   }
 }
