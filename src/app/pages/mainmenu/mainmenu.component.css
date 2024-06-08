@@ -4,39 +4,48 @@
     width: 100%;
     z-index: 1;
     opacity: 0.8;
+    background-color: #2f3134;
 }
 
 .flex {
     flex: 1 1 auto;
 }
 
-.name {
-    font-size: large;
-    pointer-events: none;
+.button {
+    color: aliceblue;
 }
 
 .button:hover {
-    color: white;
-    background-color: rgb(60, 80, 179);
+    color: black;
+    background-color: aliceblue;
     padding: 10px;
-    font-size: large;
+    font-size: medium;
     border-radius: 5px;
 }
 
 .slider {
     background-color: #7b8aff;
 }
-.menu{
-    display: none;
+
+.profile-container:hover {
+    background-color: green;
 }
-@media (max-width: 600px) {
-    .name {
-        display: none;
-    }
-    .menu{
-    display: flex;
-    }
-    .spacer {
-        flex-grow: 1;
-    }
+
+.profile-container {
+    width: 50px;
+    padding: 3px;
+    background-color: aliceblue;    
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+}
+
+.modal-img {
+    width: 300px;
 }

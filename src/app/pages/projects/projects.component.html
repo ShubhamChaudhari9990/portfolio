@@ -1,13 +1,20 @@
 <div class="container">
-  <h3>Currently working on projects.It will be adding soon</h3>
+  <div class="container"> 
+    <header>
+        <h1>Projects</h1>
+        <p>Here are two mini projects developed using Firebase: an authentication
+           system and a CRUD application.</p>
+        <div class="d-flex justify-content-center" *ngFor="let project of about?.projects">
+          <button class="btn" (click)="showProject(project)">
+            <i class="fa fa-link fa-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+    </header>
+  </div>
   <ngb-carousel [interval]="3000" [showNavigationArrows]="arrow" *ngIf="images">
     <ng-template ngbSlide *ngFor="let image of images">
       <div class="picsum-img-wrapper">
         <img [src]="image" alt="Random slide" class="carousel" />
-      </div>
-      <div class="carousel-caption">
-        <h3>No mouse navigation</h3>
-        <p>This carousel hides navigation arrows and indicators.</p>
       </div>
     </ng-template>
   </ngb-carousel>
