@@ -1,16 +1,9 @@
 <div class="container">
-    <header>
-        <h1>About Us</h1>
-        <p>Welcome to my IT student portfolio</p>
-    </header>
-
     <div class="container">
-        <h2>Introduction</h2>
-        <p>
-            {{about?.introduction}}
-        </p>
-
-        <h2>Skills</h2>
+        <header>
+            <h1>About Us</h1>
+            <p>Welcome to my IT student portfolio</p>
+        </header>
         <div class="skills">
             <ul>
                 <li>Web Development
@@ -36,23 +29,6 @@
                     </ul>
                 </li>
             </ul>
-        </div>
-
-        <h2>Projects</h2>
-        <p>
-            {{about?.projectDescription}}
-        </p>
-        <div *ngFor="let project of about?.projects">
-            <ul>
-                <li><a [href]="'https://'+project.projectUrl" target="_blank">{{project.projectName}}</a></li>
-            </ul>
-        </div>
-
-        <h2>Contact</h2>
-        <div class="contact">
-            <p>If you'd like to get in touch with me, you can reach me at:</p>
-            <p>Email: <a href="shubhamchaudhari9990@gmail.com">shubhamchaudhari9990@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/shubham-chaudhari-0b89b3242/">linkedin</a></p>
         </div>
     </div>
 </div>

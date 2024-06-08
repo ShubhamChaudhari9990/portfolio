@@ -1,16 +1,41 @@
 .carousel {
-    width: 30%;
+    width: 100%;
     max-height: auto;
     padding: 10px;
-    text-align: end;
 }
 
 img {
-    width: 10%;
-    height: 10%;
+    width: 100%;
+    height: auto;
 }
 
 .image-container {
     position: relative;
     display: inline-block;
+}
+
+.container {
+    max-width: 100%;
+    opacity: 0.8;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+}
+
+header {
+    border-radius: 10px;
+    background-color: #2f3134;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.btn {
+    color: aliceblue;
+}
+
+.btn:hover {
+    background-color: aliceblue;
+    color: black;
 }

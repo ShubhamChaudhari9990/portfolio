@@ -1,15 +1,15 @@
 <mat-toolbar class="toolbar">
     <span class="flex">
-        <button class="name" mat-raised-button color="primary">{{name}}</button>
+        <div class="profile-container">
+            <img src="../../../assets/shubham.jpeg" alt="Profile Image" class="profile-image" 
+                data-bs-toggle="modal" data-bs-target="#exampleModal">
+        </div>
     </span>
     <span class="spacer"></span>
-    <button mat-icon-button class="menu">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <button class="button" mat-button color="primary" (click)="activateComponent('home')">Home</button>
-    <button class="button" mat-button color="primary" (click)="activateComponent('project')">Projects</button>
-    <button class="button" mat-button color="primary" (click)="activateComponent('about')">About</button>
-    <button class="button" mat-button color="primary" (click)="activateComponent('contact')">contact</button>
+    <button class="btn button" (click)="activateComponent('home')">Home</button>
+    <button class="btn button" (click)="activateComponent('project')">Projects</button>
+    <button class="btn button" (click)="activateComponent('about')">About</button>
+    <button class="btn button" (click)="activateComponent('contact')">Contact</button>
 </mat-toolbar>
 <div class="slider">
     <app-home id="home"></app-home>
@@ -17,4 +17,33 @@
     <app-about id="about"></app-about>
     <app-contact id="contact"></app-contact>
     <app-footer></app-footer>
+</div>
+<div class="modal fade" id="exampleModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-content-center">
+                <h1 class="modal-title m-0" id="exampleModalLabel">Profile</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex justify-content-center">
+                    <img src="../../../assets/shubham.jpeg" alt="Profile Image" class="modal-img rounded">
+                </div>
+                <div class="d-flex justify-content-center p-3 pb-0">
+                    <button class="btn" (click)="openMail()">
+                        <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn" (click)="openLinkedInProfile()">
+                        <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn" (click)="openGithubProfile()">
+                        <i class="fa fa-github-square fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="p-3">
+                    <p>I am a passionate Full-Stack Developer specializing in Angular with over 1 years of experience in building dynamic and responsive web applications. Proficient in both front-end and back-end technologies, I aim to deliver high-quality software solutions that enhance user experiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
