@@ -34,4 +34,18 @@ export class MainmenuComponent {
     openGithubProfile() {
       window.open('https://github.com/ShubhamChaudhari9990','_blank');
     }
+
+    returnTotalExperience() {
+      const startDate = new Date(2022, 4);
+      const currentDate = new Date();
+
+      let years = currentDate.getFullYear() - startDate.getFullYear();
+      let months = currentDate.getMonth() - startDate.getMonth();
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+      return `${years}.${months}`;
+    }
 }
