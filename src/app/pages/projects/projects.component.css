@@ -39,3 +39,42 @@ header {
     background-color: aliceblue;
     color: black;
 }
+
+/* integrations.component.css */
+.integration-scroll-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    background: #fff; /* optional */
+}
+
+.integration-scroll-track {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+    gap: 40px;
+}
+
+.integration {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.integration img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Animation */
+@keyframes scroll-left {
+    0% {
+    transform: translateX(0%);
+    }
+    100% {
+    transform: translateX(-50%);
+    }
+}
+  
+  

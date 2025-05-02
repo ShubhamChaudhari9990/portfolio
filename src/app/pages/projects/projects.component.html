@@ -9,6 +9,16 @@
             <i class="fa fa-link fa-lg" aria-hidden="true"></i>
           </button>
         </div>
+
+        <!-- integrations.component.html -->
+        <div class="integration-scroll-wrapper">
+          <div class="integration-scroll-track">
+            <div class="integration" *ngFor="let logo of logos">
+              <img [src]="logo.src" [alt]="logo.name" />
+              <p>{{ logo.name }}</p>
+            </div>
+          </div>
+        </div>
     </header>
   </div>
   <ngb-carousel [interval]="3000" [showNavigationArrows]="arrow" *ngIf="images">
